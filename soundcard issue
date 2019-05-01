@@ -1,0 +1,10 @@
+aplay -Ll --> returns error 
+but
+sudo aplay -Ll -->works fine
+
+Then it is permission issue and run below command
+
+sudo setfacl -m u:<username>:rw /dev/snd/*
+
+now run, you should be able to see the sound card
+aplay -Ll
