@@ -8,3 +8,6 @@ sudo setfacl -m u:<username>:rw /dev/snd/*
 
 now run, you should be able to see the sound card
 aplay -Ll
+
+pulseaudio --kill; sleep 2s; sudo alsa force-reload ; 
+pulseaudio --start
