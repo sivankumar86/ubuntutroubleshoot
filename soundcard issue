@@ -11,3 +11,12 @@ aplay -Ll
 
 pulseaudio --kill; sleep 2s; sudo alsa force-reload ; 
 pulseaudio --start
+
+
+Firewall fix:
+
+sudo manage --force --verbose
+sudo systemctl enable ufw
+sudo systemctl start ufw
+sudo systemctl status ufw.service
+sudo journalctl -e -u ufw.service
